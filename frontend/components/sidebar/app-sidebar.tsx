@@ -30,7 +30,14 @@ const menuItems = [
 export function AppSidebar() {
   return (
     <aside className="w-64 border-r bg-background h-screen p-4">
-      <h1 className="mb-8 text-xl font-bold">Industrial Brain OS</h1>
+      <h1 className="mb-8 text-xl font-bold">
+        <div>
+          <h1 className="text-xl font-bold">Industrial Brain OS</h1>
+          <p className="text-xs text-muted-foreground">
+              Unified Intelligence Layer
+          </p>
+       </div>
+      </h1>
 
       <nav className="space-y-2">
         {menuItems.map((item) => (

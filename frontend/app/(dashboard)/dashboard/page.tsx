@@ -1,9 +1,9 @@
 export default function DashboardPage() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Dashboard</h1>
-      <p className="mt-2 text-muted-foreground">
-        Welcome to Industrial Brain OS.
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">DASHBOARD</h1>
+      <p className="text-muted-foreground">
+        Monitor industrial operations, AI insights, and enterprise KPIs.
       </p>
     </div>
   );

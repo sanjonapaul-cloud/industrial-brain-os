@@ -1,8 +1,10 @@
-export default function AssetsPage() {
+export default function PageName() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Assets</h1>
-      <p className="mt-2 text-muted-foreground">Coming Soon...</p>
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">ASSETS</h1>
+      <p className="text-muted-foreground">
+        Manage industrial assets and equipment information.
+      </p>
     </div>
   );
 }

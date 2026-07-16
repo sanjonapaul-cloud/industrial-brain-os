@@ -1,8 +1,10 @@
-export default function CopilotPage() {
+export default function PageName() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Industrial Copilot</h1>
-      <p className="mt-2 text-muted-foreground">Coming Soon...</p>
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">COPILOT</h1>
+      <p className="text-muted-foreground">
+        AI-powered assistant for industrial knowledge and operations.
+      </p>
     </div>
   );
 }

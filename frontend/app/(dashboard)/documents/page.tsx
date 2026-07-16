@@ -1,8 +1,10 @@
-export default function DocumentsPage() {
+export default function PageName() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Documents</h1>
-      <p className="mt-2 text-muted-foreground">Coming Soon...</p>
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">DOCUMENTS</h1>
+      <p className="text-muted-foreground">
+        Upload, organize and analyze industrial documents.
+      </p>
     </div>
   );
 }

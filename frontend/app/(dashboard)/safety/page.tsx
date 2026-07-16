@@ -1,8 +1,10 @@
-export default function SafetyPage() {
+export default function PageName() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Safety</h1>
-      <p className="mt-2 text-muted-foreground">Coming Soon...</p>
+    <div className="space-y-2">
+      <h1 className="text-3xl font-bold">SAFETY</h1>
+      <p className="text-muted-foreground">
+        Track incidents, hazards and workplace safety insights.
+      </p>
     </div>
   );
 }
