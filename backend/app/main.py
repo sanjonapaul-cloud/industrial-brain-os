@@ -1,9 +1,19 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 
 app = FastAPI(
     title="Industrial Brain OS API",
     version="1.0.0",
     description="Backend API for Industrial Brain OS",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/")
@@ -18,10 +28,13 @@ def health():
         "status": "healthy"
     }
 
+from fastapi import UploadFile, File
+
 @app.post("/upload")
-def upload():
+async def upload(file: UploadFile = File(...)):
     return {
-        "message": "Upload endpoint placeholder"
+        "message": "Upload successful",
+        "filename": file.filename
     }
 
 @app.get("/documents")
