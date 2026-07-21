@@ -1,5 +1,7 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
+from app.routers.upload import router as upload_router
+from app.routers.chat import router as chat_router
 
 app = FastAPI(
     title="Industrial Brain OS API",
@@ -16,6 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(upload_router)
+app.include_router(chat_router)
 @app.get("/")
 def root():
     return {
@@ -26,15 +30,6 @@ def root():
 def health():
     return {
         "status": "healthy"
-    }
-
-from fastapi import UploadFile, File
-
-@app.post("/upload")
-async def upload(file: UploadFile = File(...)):
-    return {
-        "message": "Upload successful",
-        "filename": file.filename
     }
 
 @app.get("/documents")
