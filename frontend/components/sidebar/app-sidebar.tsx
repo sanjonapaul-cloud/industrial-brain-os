@@ -4,6 +4,7 @@ import Link from "next/link"
 import {
   LayoutDashboard,
   FileText,
+  Upload,
   Bot,
   Boxes,
   Wrench,
@@ -17,6 +18,8 @@ import {
 const menuItems = [
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { title: "Documents", href: "/documents", icon: FileText },
+  { title: "Upload Documents", href: "/documents/upload", icon: Upload },
+
   { title: "Industrial Copilot", href: "/copilot", icon: Bot },
   { title: "Assets", href: "/assets", icon: Boxes },
   { title: "Maintenance", href: "/maintenance", icon: Wrench },

@@ -141,8 +141,13 @@ export default function CopilotPage() {
         ))}
 
         {loading && (
-          <p>Thinking...</p>
-        )}
+  <div className="rounded-md border bg-muted p-3 animate-pulse">
+    <p className="font-semibold">🤖 Industrial Copilot</p>
+    <p className="text-sm text-muted-foreground">
+      Thinking... Analyzing documents and retrieving relevant knowledge...
+    </p>
+  </div>
+)}
 
       </div>
 
@@ -156,11 +161,12 @@ export default function CopilotPage() {
         />
 
         <button
-          onClick={sendQuestion}
-          className="bg-black text-white px-5 rounded-md"
-        >
-          Send
-        </button>
+  onClick={sendQuestion}
+  disabled={loading}
+  className="bg-black text-white px-5 rounded-md disabled:opacity-50"
+>
+  {loading ? "Thinking..." : "Send"}
+</button>
 
       </div>
 
